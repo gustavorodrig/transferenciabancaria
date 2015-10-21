@@ -7,6 +7,17 @@
    </head>
    <body>
       <h2>Agendar Transferência Bancária</h2>
+      
+     <div>
+      <table>
+   		<tr>
+     	<td><b>Mensagem: ${mensagem}</b></td>
+     	</tr>
+     	</table>
+     </div>
+      <br>
+      <br>
+      
       <form:form method="POST" action="adiciona">
          <table>
             <tr>
@@ -35,10 +46,10 @@
            </tr>
            <tr>
                <td>
-                  <form:label path="dataAgendada">Data do agendamento:</form:label>
+                  <form:label path="dataAgendada">Data do agendamento:</form:label>                  
                </td>
                <td>
-                 <input type="text" class="form-control" name="dataAgendada" placeholder="DD/MM/AAAA" required/>
+                 <input type="text" name="dataAgendada" placeholder="DD/MM/AAAA" required />               
                </td>
             </tr>
             <tr>

@@ -1,17 +1,14 @@
 package br.com.transferenciabancaria.modelo;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
-
 import org.joda.time.DateTime;
 import org.joda.time.Days;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import br.com.transferenciabancaria.calculo.TipoTaxa;
 
-@SuppressWarnings("serial")
-public class Agendamento implements Serializable {
+
+public class Agendamento {
 
 	private long id;
 	private String contaOrigem;
@@ -19,10 +16,10 @@ public class Agendamento implements Serializable {
 	private BigDecimal valorTransferencia;
 	private BigDecimal taxa;
 
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Date dataCadastro = new Date();
 
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Date dataAgendada;
 
 	private TipoTaxa tipoTaxa;
