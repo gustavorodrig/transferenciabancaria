@@ -1,7 +1,6 @@
 package br.com.transferenciabancaria.modelo;
 
 import java.math.BigDecimal;
-import java.util.Date;
 import org.joda.time.DateTime;
 import org.joda.time.Days;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -17,15 +16,15 @@ public class Agendamento {
 	private BigDecimal taxa;
 
 	@DateTimeFormat(pattern="dd/MM/yyyy")
-	private Date dataCadastro = new Date();
-
+	private DateTime dataCadastro = new DateTime();
+	
 	@DateTimeFormat(pattern="dd/MM/yyyy")
-	private Date dataAgendada;
+	private DateTime dataAgendada;
 
 	private TipoTaxa tipoTaxa;
 
 	public Agendamento(String contaOrigem, String contaDestino, BigDecimal valorTransferencia, BigDecimal taxa,
-			Date dataCadastro, Date dataAgendada, TipoTaxa tipoTaxa) {
+			DateTime dataCadastro, DateTime dataAgendada, TipoTaxa tipoTaxa) {
 		this.contaOrigem = contaOrigem;
 		this.contaDestino = contaDestino;
 		this.valorTransferencia = valorTransferencia;
@@ -87,24 +86,24 @@ public class Agendamento {
 		this.tipoTaxa = tipoTaxa;
 	}
 
-	public Date getDataCadastro() {
+	public DateTime getDataCadastro() {
 		return dataCadastro;
 	}
 
-	public void setDataCadastro(Date dataCadastro) {
+	public void setDataCadastro(DateTime dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
 
-	public Date getDataAgendada() {
+	public DateTime getDataAgendada() {
 		return dataAgendada;
 	}
 
-	public void setDataAgendada(Date dataAgendada) {
+	public void setDataAgendada(DateTime dataAgendada) {
 		this.dataAgendada = dataAgendada;
 	}
 
 	public int quantidadeDiasCadastroTransferencia() {
-		return Days.daysBetween(new DateTime(this.dataCadastro), new DateTime(this.dataAgendada)).getDays();
+		return Days.daysBetween(this.dataCadastro, this.dataAgendada).getDays();
 	}
 
 }

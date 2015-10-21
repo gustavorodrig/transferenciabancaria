@@ -1,5 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
-<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%> 
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib prefix="joda" uri="http://www.joda.org/joda/time/tags" %>
 <html>
    <head>
       <title>Agendamentos</title>
@@ -25,10 +26,10 @@
                   <td>${listValue.taxa}</td>
                   <td>${listValue.tipoTaxa}</td>
                   <td>
-                     <fmt:formatDate pattern="dd/MM/yyyy" value="${listValue.dataCadastro}" />
+                  <joda:format value="${listValue.dataCadastro}" pattern="dd/MM/yyyy"/>
                   </td>
                   <td>
-                     <fmt:formatDate pattern="dd/MM/yyyy" value="${listValue.dataAgendada}" />
+                  <joda:format value="${listValue.dataAgendada}" pattern="dd/MM/yyyy"/>
                   </td>
                </tr>
             </c:forEach>
@@ -38,3 +39,4 @@
       <b><a href="/transferenciabancaria/">Agendar nova transferência</a></b>
    </body>
 </html>
+

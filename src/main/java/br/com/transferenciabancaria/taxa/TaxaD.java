@@ -7,11 +7,11 @@ import br.com.transferenciabancaria.modelo.Agendamento;
 
 public class TaxaD implements ITaxa {
 
-	/*
-	 * Operações do tipo D tem a taxa igual a A, B ou C dependendo do valor da
-	 * transferência. Valores até $25.000 seguem a taxação tipo A 
-	 * Valores de $25.001 até $120.000 seguem a taxação tipo B 
-	 * Valores maiores que $120.000 seguem a taxação tipo C
+	 /*
+	   Operações do tipo D tem a taxa igual a A, B ou C dependendo do valor da
+	   transferência. Valores até $25.000 seguem a taxação tipo A 
+	   Valores de $25.001 até $120.000 seguem a taxação tipo B 
+	   Valores maiores que $120.000 seguem a taxação tipo C
 	 */
 	@Override
 	public BigDecimal calculaTaxa(Agendamento agendamento) {

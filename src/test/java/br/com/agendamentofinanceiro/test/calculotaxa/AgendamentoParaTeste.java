@@ -16,8 +16,8 @@ public class AgendamentoParaTeste {
 		Agendamento ag = new Agendamento();
 		ag.setContaOrigem("12345-67");
 		ag.setContaDestino("99999-11");
-		ag.setDataCadastro(dataAtual.toDate());
-		ag.setDataAgendada(dataAgendada.toDate());
+		ag.setDataCadastro(dataAtual.toDateTime());
+		ag.setDataAgendada(dataAgendada.toDateTime());
 		ag.setValorTransferencia(valorTransferencia);
 
 		return ag;

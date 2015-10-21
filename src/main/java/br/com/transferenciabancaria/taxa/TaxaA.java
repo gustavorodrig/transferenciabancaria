@@ -8,7 +8,7 @@ import br.com.transferenciabancaria.modelo.Agendamento;
 public class TaxaA implements ITaxa{
 
 	/* Regra de Calculo
-	 * Operações do tipo A tem uma taxa de $2 mais 3% do valor da transferência
+	   Operações do tipo A tem uma taxa de $2 mais 3% do valor da transferência
 	*/
 	@Override
 	public BigDecimal calculaTaxa(Agendamento agendamento) {

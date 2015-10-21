@@ -51,8 +51,8 @@
                <td>
                  <input type="text" name="dataAgendada" placeholder="DD/MM/AAAA" required />               
                </td>
-            </tr>
-            <tr>
+           </tr>
+           <tr>
             	<td>
                   <form:label path="tipoTaxa">Tipo de Taxa:</form:label>
                </td>

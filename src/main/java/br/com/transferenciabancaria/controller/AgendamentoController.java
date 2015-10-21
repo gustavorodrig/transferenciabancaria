@@ -31,12 +31,14 @@ public class AgendamentoController {
 	@RequestMapping(value = "/adiciona", method = RequestMethod.POST)
 	public ModelAndView adicionarAgendamento(@ModelAttribute Agendamento agendamento, BindingResult result) {
 
-		//Se houver um erro no cadastro retorna a pagina de cadastro
+
+		//Se houver um erro no cadastro retorna para a pagina de cadastro
 		if(result.hasErrors())
 			return formulario("Erro no preenchimento do formulário!");
 		
 		TipoTaxa tipoTaxa = agendamento.getTipoTaxa();
-		ITaxa taxa = tipoTaxa.getTaxa();
+		
+		ITaxa taxa = tipoTaxa.getTaxa();		
 		BigDecimal valorTaxa = taxa.calculaTaxa(agendamento);
 		agendamento.setTaxa(valorTaxa);
 		new AgendamentoDAO().adiciona(agendamento);

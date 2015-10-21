@@ -8,10 +8,10 @@ import br.com.transferenciabancaria.modelo.Agendamento;
 
 public class TaxaB implements ITaxa {
 
-	/*
-	 * Regra de Calculo 
-	 * $10 para pedidos com agendamento até 30 dias da data de cadastro 
-	 * $8 para os demais
+	 /*
+	   Regra de Calculo 
+	   $10 para pedidos com agendamento até 30 dias da data de cadastro 
+	   $8 para os demais
 	 */
 	public BigDecimal calculaTaxa(Agendamento agendamento) {
 

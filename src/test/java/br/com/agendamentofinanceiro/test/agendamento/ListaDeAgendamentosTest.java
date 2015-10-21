@@ -1,8 +1,7 @@
 package br.com.agendamentofinanceiro.test.agendamento;
 
 import java.math.BigDecimal;
-import java.util.Date;
-
+import org.joda.time.DateTime;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,8 +21,8 @@ public class ListaDeAgendamentosTest {
 		ag = new Agendamento();
 		ag.setContaOrigem("12345-67");
 		ag.setContaDestino("99999-11");
-		ag.setDataCadastro(new Date());
-		ag.setDataAgendada(new Date());
+		ag.setDataCadastro(new DateTime());
+		ag.setDataAgendada(new DateTime());
 		ag.setValorTransferencia(new BigDecimal("100.00"));
 		ag.setTaxa(new BigDecimal("1.00"));
 		ag.setTipoTaxa(TipoTaxa.A);
